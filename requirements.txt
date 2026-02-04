@@ -16,3 +16,4 @@ matplotlib
 pathlib
 logging
 python-dotenv
+groq
