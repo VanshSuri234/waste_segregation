@@ -1,18 +1,20 @@
-# 1. Look in PyTorch first for CPU wheels, then PyPI for everything else
 --extra-index-url https://download.pytorch.org/whl/cpu
+
+# 1. Install Headless OpenCV FIRST and force the version
+opencv-python-headless==4.10.0.84
 
 # 2. Core API Framework
 fastapi[standard]
 uvicorn
 python-multipart
 
-# 3. AI & Computer Vision (Will pull CPU version from the extra index)
+# 3. AI & Computer Vision
+# We use 'ultralytics' but we must ensure it doesn't bring back the wrong opencv
 torch
 torchvision
 ultralytics
 
 # 4. Data & Utilities
-opencv-python-headless
 pandas
 matplotlib
 pathlib
