@@ -1,16 +1,18 @@
-# Core API Framework
+# 1. Force CPU-only versions (Shrinks build from 3GB to ~500MB)
+--index-url https://download.pytorch.org/whl/cpu
+
+# 2. Core API Framework
 fastapi[standard]
 uvicorn
 python-multipart
 
-# AI & Computer Vision
-ultralytics
+# 3. AI & Computer Vision (CPU Optimized)
 torch
 torchvision
-torchaudio
-opencv-python
+ultralytics
 
-# Data & Utilities
+# 4. Data & Utilities (Use headless OpenCV for servers)
+opencv-python-headless
 pandas
 matplotlib
 pathlib
