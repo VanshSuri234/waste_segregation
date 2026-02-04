@@ -1,0 +1,6 @@
+inputs
+processed_data
+runs
+test
+.env
+__pycache__

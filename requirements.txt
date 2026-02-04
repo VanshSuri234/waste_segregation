@@ -1,0 +1,17 @@
+# Core API Framework
+fastapi[standard]
+uvicorn
+python-multipart
+
+# AI & Computer Vision
+ultralytics
+torch
+torchvision
+torchaudio
+opencv-python
+
+# Data & Utilities
+pandas
+matplotlib
+pathlib
+logging
