@@ -1,23 +1,20 @@
+# Use the extra index for CPU-optimized torch
 --extra-index-url https://download.pytorch.org/whl/cpu
 
-# 1. Install Headless OpenCV FIRST and force the version
-opencv-python-headless==4.10.0.84
-
-# 2. Core API Framework
+# Core API Framework
 fastapi[standard]
 uvicorn
 python-multipart
 
-# 3. AI & Computer Vision
-# We use 'ultralytics' but we must ensure it doesn't bring back the wrong opencv
+# AI & Computer Vision
+# Using -headless here is still a good safety measure
 torch
 torchvision
 ultralytics
+opencv-python-headless
 
-# 4. Data & Utilities
+# Data & Utilities
 pandas
 matplotlib
-pathlib
-logging
 python-dotenv
 groq
