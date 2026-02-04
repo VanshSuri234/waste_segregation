@@ -9,7 +9,8 @@ from typing import List  # Required for multi-file upload
 from contextlib import asynccontextmanager
 from fastapi import FastAPI, UploadFile, File, Form, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-
+from dotenv import load_dotenv  # 1. Import this
+load_dotenv()
 # --- FIX: Global Security Override ---
 torch.load = functools.partial(torch.load, weights_only=False)
 

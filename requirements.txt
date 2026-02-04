@@ -15,3 +15,4 @@ pandas
 matplotlib
 pathlib
 logging
+python-dotenv
