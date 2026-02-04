@@ -1,17 +1,17 @@
-# 1. Force CPU-only versions (Shrinks build from 3GB to ~500MB)
---index-url https://download.pytorch.org/whl/cpu
+# 1. Look in PyTorch first for CPU wheels, then PyPI for everything else
+--extra-index-url https://download.pytorch.org/whl/cpu
 
 # 2. Core API Framework
 fastapi[standard]
 uvicorn
 python-multipart
 
-# 3. AI & Computer Vision (CPU Optimized)
+# 3. AI & Computer Vision (Will pull CPU version from the extra index)
 torch
 torchvision
 ultralytics
 
-# 4. Data & Utilities (Use headless OpenCV for servers)
+# 4. Data & Utilities
 opencv-python-headless
 pandas
 matplotlib
